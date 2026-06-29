@@ -1,0 +1,16 @@
+.closebutton {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.window {
+  border: solid;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: #fafff2;
+  border: solid 2px #98CF3D;
+  padding: 10px;
+  border-radius:20px;
+  border-width: 4px;
+}
