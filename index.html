@@ -15,8 +15,8 @@ font-family: 'Hachi Maru Pop', serif;
         <p style="margin-left: 16px; background-color: rgba(256, 256, 256, 0.25); padding: 6px 20px; border-radius: 16px;">
             Cloudy 17° 
         </p>
-        <p style="margin-left: 16px; background-color: rgba(256, 256, 256, 0.25); padding: 6px 20px; border-radius: 16px;">
-          6/21/2023 3:41 PM
+        <p id="timeElement" style="margin-left: 16px; background-color: rgba(256, 256, 256, 0.25); padding: 6px 20px; border-radius: 16px;">
+          time
         </p>
     </div>
    <div style="background-color: #fafff2; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border: solid 2px #98CF3D; padding: 10px; border-radius:20px; border-width: 4px;">
@@ -28,6 +28,15 @@ font-family: 'Hachi Maru Pop', serif;
        <p> I <dfn>LOVE</dfn> to play lots of horror games, listen to music, and watch sitcoms!</p>
      <a href="https://www.tiktok.com/@japan.weeb3?is_from_webapp=1&sender_device=pc">My TikTok!</a>
     </div>
+    <script>
+        function updateTime() {
+        var currentTime = new Date().toLocaleString();
+        var timeText = document.querySelector("#timeElement");
+        timeText.innerHTML = currentTime;
+    }
+    setInterval(updateTime, 1000);
+
+</script>
   </body>
 
 </html>
