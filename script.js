@@ -27,7 +27,7 @@ function dragElement(element) {
   }
 
   // Step 6: Define the `startDragging` function to capture the initial mouse position and set up event listeners.
-  function startDragging(e) {
+  function startDragging (e) {
     e = e || window.event;
     e.preventDefault();
     // Step 7: Get the mouse cursor position at startup.
