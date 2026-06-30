@@ -101,3 +101,52 @@ selectIcon(element)
 }
 
 }
+dragElement(document.querySelector("#clovernotes"))
+var notesScreen = document.querySelector("#clovernotes")
+
+var notesScreenClose = document.querySelector("#clovernotesclose")
+
+notesScreenClose.addEventListener("click", () =>
+
+closeWindow(notesScreen));
+var biggestIndex = 1;
+function addWindowTapHandling(WelcomeScreen) {
+  element.addEventListener("mousedown", () =>
+    handleWindowTap(element)
+  )
+}
+function addWindowTapHandling(cloverNotesScreen) {
+  element.addEventListener("mousedown", () =>
+    handleWindowTap(element)
+  )
+}
+function handleWindowTap(element) {
+  biggestIndex++;  // Increment biggestIndex by 1
+  element.style.zIndex = biggestIndex;
+}
+function openWindow(element) {
+  element.style.display = "flex";
+  biggestIndex++;  // Increment biggestIndex by 1
+  element.style.zIndex = biggestIndex;
+}
+var cloverNotesScreen = document.querySelector("#clovernotes")
+function closeWindow(element) {
+  element.style.display = "none"
+}
+function openWindow(element) {
+  element.style.display = "flex"
+}
+var cloverNotesScreenClose = document.querySelector("#clovernotesclose")
+
+var cloverNotesScreenOpen = document.querySelector("#clovernotesopen")
+
+cloverNotesScreenClose.addEventListener("click", function() {
+  closeWindow(cloverNotesScreen);
+});
+
+cloverNotesScreenOpen.addEventListener("click", function() {
+  openWindow(cloverNotesScreen);
+});
+
+
+
