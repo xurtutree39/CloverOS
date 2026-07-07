@@ -147,3 +147,6 @@ cloverNotesScreenClose.addEventListener("click", function() {
 cloverNotesScreenOpen.addEventListener("click", function() {
   openWindow(cloverNotesScreen);
 });
+
+
+
