@@ -148,5 +148,76 @@ cloverNotesScreenOpen.addEventListener("click", function() {
   openWindow(cloverNotesScreen);
 });
 
+var selectedIcon = undefined
+function selectIcon(element) {
+  element.classList.add("selected");
+  selectedIcon = element
+} 
+
+function deselectIcon(element) {
+
+element.classList.remove("selected");
+
+selectedIcon = undefined
+}
+function handleIconTap(element) {
+if (element.classList.contains("selected")) {
+deselectIcon(element)
+openWindow(window)
+
+} else {
+
+selectIcon(element)
+
+}
+
+}
+dragElement(document.querySelector("#clovertunes"))
+var tunesScreen = document.querySelector("#clovertunes")
+
+var tunesScreenClose = document.querySelector("#clovertunesclose")
+
+tunesScreenClose.addEventListener("click", () =>
+
+closeWindow(tunesScreen));
+var biggestIndex = 1;
+function addWindowTapHandling(WelcomeScreen) {
+  element.addEventListener("mousedown", () =>
+    handleWindowTap(element)
+  )
+}
+function addWindowTapHandling(cloverTunesScreen) {
+  element.addEventListener("mousedown", () =>
+    handleWindowTap(element)
+  )
+}
+function handleWindowTap(element) {
+  biggestIndex++;  // Increment biggestIndex by 1
+  element.style.zIndex = biggestIndex;
+}
+function openWindow(element) {
+  element.style.display = "flex";
+  biggestIndex++;  // Increment biggestIndex by 1
+  element.style.zIndex = biggestIndex;
+}
+var clovertunesScreen = document.querySelector("#clovertunes")
+function closeWindow(element) {
+  element.style.display = "none"
+}
+function openWindow(element) {
+  element.style.display = "flex"
+}
+var clovertunesScreenClose = document.querySelector("#clovertunesclose")
+
+var clovertunesScreenOpen = document.querySelector("#clovertunesopen")
+
+clovertunesScreenClose.addEventListener("click", function() {
+  closeWindow(clovertunesScreen);
+});
+
+clovertunesScreenOpen.addEventListener("click", function() {
+  openWindow(clovertunesScreen);
+});
+
 
 
